@@ -1,0 +1,34 @@
+/* Hero.scss */
+
+.hero {
+  background-image: url('../img/first-screen.png'); /* Замініть на шлях до вашого фонового зображення */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Заставляємо секцію займати всю висоту екрану */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: #fff;
+
+  &__content {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Додаємо напівпрозорий чорний фон */
+    padding: 2rem;
+    border-radius: 10px;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__title--highlight {
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  &__description {
+    font-size: 1.2rem;
+  }
+}

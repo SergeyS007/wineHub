@@ -1,0 +1,19 @@
+/* main.scss */
+
+/* Variables */
+:root {
+  --primary-color: #7b3f00;
+  --secondary-color: #ffffff;
+  --background-image: url('../img/first-screen.png');
+  --font-stack: 'Arial, sans-serif';
+}
+
+/* Reset some default browser styles */
+body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-stack);
+}
