@@ -1,6 +1,5 @@
 import React from 'react';
 import './Header.scss';
-import logo from '../img/wine-hub.png'; // Імпорт логотипу
 import userIcon from '../img/user-icon.png'; // Імпорт іконки користувача
 import searchIcon from '../img/search-icon.png'; // Імпорт іконки пошуку
 
@@ -8,7 +7,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__logo">
-        <img src={logo} alt="Wine Hub Logo" />
+        Wine Hub
       </div>
       <div className="header__search">
         <img src={searchIcon} alt="Search Icon" className="header__search-icon" />

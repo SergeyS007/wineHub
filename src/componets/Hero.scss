@@ -1,34 +1,126 @@
 /* Hero.scss */
 
 .hero {
-  background-image: url('../img/first-screen.png'); /* Замініть на шлях до вашого фонового зображення */
-  background-size: cover;
-  background-position: center;
-  height: 100vh; /* Заставляємо секцію займати всю висоту екрану */
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Висота на весь екран */
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 2rem;
-  color: #fff;
+  justify-content: center;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Задній план */
+    opacity: 0.9; /* Напівпрозорість */
+    
+    &-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Зображення покриває всю секцію */
+      filter: blur(2px); /* Розмиття фону */
+    }
+  }
 
   &__content {
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Додаємо напівпрозорий чорний фон */
-    padding: 2rem;
-    border-radius: 10px;
+    z-index: 1; /* Попереду фонового зображення */
+    background-color: rgba(255, 255, 255, 0.2); /* Напівпрозорий фон для тексту */
+    backdrop-filter: blur(10px); /* Розмиття для тексту */
+    border-radius: 12px; /* Круглі кути */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Тінь навколо блоку */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 100px 40px; /* Внутрішні відступи */
+    margin: 100px 40px;
+    position: relative; /* Для використання абсолютного позиціонування всередині */
+  }
+
+  &__upper {
+    display: flex;
+    gap: 82px;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    text-align: left;
+  }
+
+  &__upper-column {
+    // flex: 1;
+    display: flex;
+    // flex-direction: column;
+    gap: 40px;
+    align-items: flex-start; /* Вирівнювання по лівому краю */
+    justify-content: center;
+    padding: 0 20px;
+  }
+
+  &__upper-column:first-child {
+    align-items: flex-start; /* Вирівнювання по лівому краю */
+  }
+
+  &__upper-column:last-child {
+    align-items: flex-end; /* Вирівнювання по правому краю */
   }
 
   &__title {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 6rem; /* Розмір шрифту заголовку */
+    font-weight: 700; /* Жирний шрифт */
+    margin: 0;
+    line-height: 1.2;
+    color: #333; /* Колір тексту */
   }
 
-  &__title--highlight {
-    font-style: italic;
-    font-weight: bold;
+  &__subtitle {
+    font-size: 1.5rem; /* Розмір шрифту підзаголовків */
+    font-weight: 300; /* Легкий шрифт */
+    margin: 0;
+    color: #333; /* Колір тексту */
+    max-width: 100%; /* Запобігання виходу тексту за межі блоку */
   }
 
-  &__description {
-    font-size: 1.2rem;
+  &__lower {
+    display: flex;
+    align-items: center; /* Центрування по центру */
+    justify-content: flex-start; /* Вирівнювання по лівому краю */
+    width: 100%;
+    gap: 10px;
+    text-align: left; /* Текст по лівій стороні */
+    position: relative; /* Для використання абсолютного позиціонування всередині */
+  }
+
+  &__highlighted-text {
+    padding-left: 135px;
+    font-size: 6rem; /* Розмір шрифту виділеного тексту */
+    font-style: italic; /* Курсив для виділеного тексту */
+    font-weight: 400;
+    color: #FFFFFF; /* Виділений колір */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1; /* Забезпечує зайняття всієї доступної ширини */
+  }
+
+  &__main-title {
+    font-size: 6rem; /* Розмір шрифту заголовку */
+    font-weight: 700; /* Жирний шрифт */
+    margin: 0;
+    line-height: 1.2;
+    color: #333; /* Колір тексту */
+  }
+
+  &__icon {
+    width: 50px; /* Розмір іконки */
+    height: 50px; /* Розмір іконки */
+    position: absolute; /* Абсолютне позиціонування */
+    left: 20px; /* Відступ зліва */
+    bottom: 20px; /* Відступ знизу */
   }
 }

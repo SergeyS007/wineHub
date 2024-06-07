@@ -5,7 +5,7 @@
   --primary-color: #7b3f00;
   --secondary-color: #ffffff;
   --background-image: url('../img/first-screen.png');
-  --font-stack: 'Arial, sans-serif';
+  // --font-stack: 'Arial, sans-serif';
 }
 
 /* Reset some default browser styles */
@@ -15,5 +15,5 @@ body, h1, p {
 }
 
 body {
-  font-family: var(--font-stack);
+  // font-family: var(--font-stack);
 }
