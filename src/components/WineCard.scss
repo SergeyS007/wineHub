@@ -1,0 +1,27 @@
+.wineCard {
+    width: 440px;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    padding: 20px 12px 20px 12px;
+
+   &__thumb {
+width: 440px;
+height: 440px;
+margin-bottom: 20px;
+}
+&__img {
+    object-position: 50% 50%;
+    display: block;
+        height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+&__reviews {
+    margin-bottom: 20px;
+}
+&__name {
+    display: flex;
+    justify-content:space-between;
+}
+}

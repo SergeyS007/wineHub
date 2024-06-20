@@ -1,21 +1,36 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import "./BestSellers.scss";
-import wineBottle from "../img/wine-bottle.png"; // Імпорт зображення пляшки вина
+import { AiOutlineLeftCircle } from "react-icons/ai";
+import { AiOutlineRightCircle } from "react-icons/ai";
+import { fetchWines } from "../services/api";
+import WineList from "./WineList";
 
 const BestSellers = () => {
-  //   fetch("http://127.0.0.1:8001/wines/reds/")
-  //     .then((response) => response.json())
-  //     .then((data) => console.log(data))
-  //     .catch((error) => console.error("Error:", error));
+  const [wineList, setWineList] = useState([]);
+  // const wineListThreeItems = [wineList[0], wineList[1], wineList[2]];
+
+  useEffect(() => {
+    fetchWines().then(setWineList);
+  }, []);
+
+  // console.log("list", wineList);
 
   return (
-    <section className="second-page">
-      <div className="second-page__content">
-        <h1 className="second-page__title">Best Sellers</h1>
-        <p className="second-page__sub-title">
-          In case of important negotiations
-        </p>
-        <div className="second-page__details">
+    <section className="bestSellers">
+      <div className="bestSellers__content">
+        <h1 className="bestSellers__title">Best Sellers</h1>
+        <div className="bestSellers__wrapper">
+          <p className="bestSellers__sub-title">Top-selling wines worldwide</p>
+          <button type="button" className="bestSellers__button">
+            <AiOutlineLeftCircle size={48} />
+          </button>
+          <button type="button" className="bestSellers__button">
+            <AiOutlineRightCircle size={48} />
+          </button>
+        </div>
+        <WineList wines={wineList} />
+        {/* <div className="second-page__details">
           <div className="second-page__rating">
             <p>
               RATING 4.3 <span className="second-page__stars">★★★★★</span>
@@ -43,7 +58,7 @@ const BestSellers = () => {
           src={wineBottle}
           alt="Wine Bottle"
           className="second-page__image"
-        />
+        /> */}
       </div>
     </section>
   );

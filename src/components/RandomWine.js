@@ -52,27 +52,29 @@ const RandomWine = () => {
             <p className="second-page__reviews">Rating based on 41 reviews</p>
           </div>
           <h2 className="second-page__wine-name">Bressan Rosantico 2011</h2>
-          <ul className="second-page__wine-info">
-            <li>
-              <span>Year</span>2011
-            </li>
-            <li>
-              <span>Country</span>Italy
-            </li>
-            <li>
-              <span>Region</span>Venezia Giulia
-            </li>
-            <li>
-              <span>Wine type</span>Rose
-            </li>
-          </ul>
+          <div className="second-page__wine-wrapper">
+            <ul className="second-page__wine-info second-page__wine-weight">
+              <li>Year</li>
+              <li>Country</li>
+              <li>Region</li>
+              <li>Wine type</li>
+            </ul>
+            <ul className="second-page__wine-info ">
+              <li>2011</li>
+              <li>Italy</li>
+              <li>Venezia Giulia</li>
+              <li>Rose</li>
+            </ul>
+          </div>
           <button className="second-page__button">Next Wine</button>
         </div>
-        <img
-          src={wineBottle}
-          alt="Wine Bottle"
-          className="second-page__image"
-        />
+        <div className="second-page__image-wrapper">
+          <img
+            src={wineBottle}
+            alt="Wine Bottle"
+            className="second-page__image"
+          />
+        </div>
       </div>
     </section>
   );

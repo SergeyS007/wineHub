@@ -1,119 +1,41 @@
-
-
-.second-page {
+.bestSellers {
     width: 100%;
-    height: 100vh;
-    /* Висота на весь екран */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    // height: 1015px;
+    padding:  80px 40px 80px 40px;
+    
     background: url('../img/second-screen.png') center center / cover no-repeat;
-    /* Фон */
-    padding: 2rem;
-    box-sizing: border-box;
-    overflow: hidden;
-    position: relative;
-    color: #333;
-    /* Основний колір тексту */
-
-    &__content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        max-width: 1200px;
-        width: 100%;
-        padding: 2rem;
-    }
+        /* Фон */
 
     &__title {
-        font-size: 3rem;
-        font-weight: 700;
-        margin: 0;
-        color: #333;
-    }
-
-    &__sub-title {
-        font-size: 1.5rem;
-        color: #4CAF50;
-        /* Колір зеленого підзаголовку */
-        margin: 0.5rem 0 1.5rem 0;
-        font-style: italic;
-    }
-
-    &__details {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-    }
-
-    &__rating {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        color: #333;
-        font-size: 1.25rem;
-
-        &__stars {
-            color: gold;
-            /* Колір зірочок */
+            font-size: 100px;
+            font-weight: 500;
+            margin: 0;
+            margin-left: 40px;
+            line-height: 1;
+            color: #333;
         }
-    }
+    
+        &__sub-title {
+            font-size: 28px;
+            color: #4CAF50;
+            /* Колір зеленого підзаголовку */
+            font-style: italic;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 97px;
+            line-height: 1.2;
+        }
 
-    &__reviews {
-        font-size: 0.875rem;
-        color: #666;
-    }
-
-    &__wine-name {
-        font-size: 2rem;
-        font-weight: 600;
-        margin: 0;
-    }
-
-    &__wine-info {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        font-size: 1rem;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-
-        li {
+       &__wrapper {
             display: flex;
-            justify-content: space-between;
-            gap: 1rem;
 
-            span {
-                font-weight: 600;
-                color: #333;
-            }
         }
-    }
-
-    &__button {
-        background-color: #336B46;
-        color: white;
-        border: none;
-        padding: 0.75rem 2rem;
-        font-size: 1rem;
-        font-weight: 600;
-        border-radius: 25px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-            background-color: #2d5e3e;
-        }
-    }
-
-    &__image {
-        position: absolute;
-        right: 10%;
-        bottom: 0;
-        height: 80vh;
-        object-fit: contain;
-    }
+       &__button {
+             padding: 0;
+             border: none;
+             border-radius:30px;
+             width: 48px;
+             height: 48px;
+                    
+                                        }
 }

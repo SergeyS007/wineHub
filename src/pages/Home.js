@@ -5,6 +5,7 @@
 import BestSellers from "../components/BestSellers";
 import Hero from "../components/Hero";
 import RandomWine from "../components/RandomWine";
+import WineInsights from "../components/WineInsights";
 
 const Home = () => {
   //   const [imageList, setImageList] = useState([]);
@@ -19,6 +20,7 @@ const Home = () => {
       <Hero />
       <RandomWine />
       <BestSellers />
+      <WineInsights />
     </div>
   );
 };

@@ -1,0 +1,46 @@
+.project {
+    width: 1440px;
+
+    &__hero {
+        width: 100%;
+        padding: 100px 40px 100px 40px;
+    }
+    &__title {
+        width: 1100px;
+        height: 225px;
+        font-size: 100px;
+        line-height: 1;
+        font-weight: 500;
+        color: #212529;
+    }
+     & span {
+        position: absolute;
+        left: 850px;
+        top: 260px;
+        color: #5C9F5E;
+        font-size: 130px;
+        line-height: 1;   
+    }
+     &__philosophy {
+        width: 100%;
+        padding: 80px 40px 80px 40px;
+
+    }
+     &__philosophy-content {
+      width: 670px;
+      height: 516px;
+      padding: 0;
+      margin-top: 40px;
+
+      & p {
+        margin-top: 30px;
+      }
+    }
+    &__philosophy-title {
+      font-size: 40px;
+      line-height: 1.2;
+      font-weight: 500;
+      margin: 0;
+      margin-top: 30px;
+    }
+}
