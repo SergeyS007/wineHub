@@ -12,6 +12,7 @@
         line-height: 1;
         font-weight: 500;
         color: #212529;
+        margin: 0;
     }
      & span {
         position: absolute;
@@ -21,12 +22,15 @@
         font-size: 130px;
         line-height: 1;   
     }
-     &__philosophy {
+     &__section {
+        display: flex;
+        gap: 90px;
         width: 100%;
         padding: 80px 40px 80px 40px;
+        background-color: #F1F3F5;
 
     }
-     &__philosophy-content {
+     &__section-content {
       width: 670px;
       height: 516px;
       padding: 0;
@@ -36,11 +40,90 @@
         margin-top: 30px;
       }
     }
-    &__philosophy-title {
+    &__section-title {
       font-size: 40px;
       line-height: 1.2;
       font-weight: 500;
       margin: 0;
       margin-top: 30px;
     }
+    &__section-thumb {
+    width: 600px;
+    height: 644px;
+    border: none;
+    border-radius: 12px;
+    }
+
+    &__section-thumb>img {
+    display: block;
+    height: 100%;
+    width: 600px;
+    object-fit: cover;
+    }
+    &__choose {
+    width: 100%;
+    padding: 80px 40px 80px 40px;
+    background-color: #F1F3F5;
+    }
+    &__choose-title {
+    width: 1015px;
+    height: 100px;
+    font-size: 100px;
+    line-height: 1;
+    font-weight: 500;
+    color: #212529;
+    margin: 0;
+    }
+    &__choose-sub {
+    font-family: Vujahday Script;
+    font-size: 28px;
+    line-height: 1.2;
+    text-align: center;
+    color: #5C9F5E;
+    margin: 0;
+    margin-top: 10px;
+   }
+   &__container {
+    width: 100%;
+    
+    }
+  &__container-item {
+    width: 440px;
+    height: 208px;
+    & img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    }
+    &__container-title {
+     max-width: 300px;
+     font-size: 40px;
+     line-height: 1.2;
+     font-weight: 500;
+     margin: 10px 0 10px 0;
+   }
+        &__container-text {
+          width: 356px;
+          font-size: 16px;
+          line-height: 1.4;
+        }
+    &__container-longImage {
+           width: 808px;
+           height: 246px;
+           border-radius:12px;
+    
+           & img {
+             display: block;
+             width: 100%;
+             height: 100%;
+             object-fit: cover;
+           }
+         }
+   &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+  }
 }
