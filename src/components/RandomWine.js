@@ -1,6 +1,9 @@
 import React from "react";
+import { useState, useEffect } from "react";
+import { fetchRandomBottleOfWine } from "../services/api";
 import "./RandomWine.scss";
-import wineBottle from "../img/wine-bottle.png"; // Імпорт зображення пляшки вина
+// import wineBottle from "../img/wine-bottle.png"; // Імпорт зображення пляшки вина
+import RandomWineCard from "./RandomWineCard";
 
 const RandomWine = () => {
   // fetch("http://127.0.0.1:8001/wines/reds/").then((response) => {
@@ -16,26 +19,23 @@ const RandomWine = () => {
   // .catch((error) => {
 
   // });
+  const [randomBottle, setRandomBottle] = useState({
+    rating: { average: "" },
+    location: { country: "" },
+    wine_type: { type: "" },
+  });
 
-  fetch("http://127.0.0.1:8001/wines/reds/")
-    .then((response) => response.json())
-    .then((data) => console.log(data))
-    .catch((error) => console.error("Error:", error));
+  useEffect(() => {
+    onSubmitNewWine();
+  }, []);
 
-  // fetch("http://127.0.0.1:8001/wines/reds/")
-  //   .then((response) => response.json())
-  //   .then((data) => {
-  //     // Обработка полученных данных
-  //     console.log(data); // Вывод данных в консоль для примера
+  console.log("randomBottle", randomBottle);
 
-  //     // Пример обработки результатов, например, вывод имени и цены первых нескольких вин
-  //     data.results.forEach((wine) => {
-  //       console.log(`Название: ${wine.name}, Цена: ${wine.price}`);
-  //     });
-  //   })
-  //   .catch((error) => {
-  //     console.error("Ошибка при получении данных:", error);
-  //   });
+  // const { rating } = randomBottle.rating.average;
+  // console.log("rating", rating);
+  function onSubmitNewWine() {
+    fetchRandomBottleOfWine().then(setRandomBottle);
+  }
 
   return (
     <section className="second-page">
@@ -44,7 +44,19 @@ const RandomWine = () => {
         <p className="second-page__sub-title">
           In case of important negotiations
         </p>
-        <div className="second-page__details">
+        <RandomWineCard
+          // key={randomBottle.winery.id}
+          rating={randomBottle.rating.average}
+          reviews={Number.parseInt(randomBottle.rating.reviews)}
+          image={randomBottle.image_url}
+          year={randomBottle.vintage}
+          name={randomBottle.name}
+          country={randomBottle.location.country}
+          region={randomBottle.location.region}
+          wineType={randomBottle.wine_type.type}
+          onSubmit={onSubmitNewWine}
+        />
+        {/* <div className="second-page__details">
           <div className="second-page__rating">
             <p>
               RATING 4.3 <span className="second-page__stars">★★★★★</span>
@@ -67,13 +79,13 @@ const RandomWine = () => {
             </ul>
           </div>
           <button className="second-page__button">Next Wine</button>
-        </div>
+        </div> */}
         <div className="second-page__image-wrapper">
-          <img
+          {/* <img
             src={wineBottle}
             alt="Wine Bottle"
             className="second-page__image"
-          />
+          /> */}
         </div>
       </div>
     </section>

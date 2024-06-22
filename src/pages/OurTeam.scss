@@ -1,0 +1,13 @@
+.ourTeam {
+    width: 1440px;
+    &__hero {
+       display: flex;
+       padding: 0;
+       padding-left: 40px;
+    }
+    &__content {
+       width: 670px;
+       height: 286px;
+       padding-top: 112px;
+    }
+}

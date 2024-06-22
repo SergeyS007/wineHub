@@ -3,18 +3,19 @@ import { useState, useEffect } from "react";
 import "./BestSellers.scss";
 import { AiOutlineLeftCircle } from "react-icons/ai";
 import { AiOutlineRightCircle } from "react-icons/ai";
-import { fetchWines } from "../services/api";
+import { fetchThreeBottles } from "../services/api";
 import WineList from "./WineList";
 
 const BestSellers = () => {
   const [wineList, setWineList] = useState([]);
+
   // const wineListThreeItems = [wineList[0], wineList[1], wineList[2]];
 
   useEffect(() => {
-    fetchWines().then(setWineList);
+    fetchThreeBottles().then(setWineList);
   }, []);
 
-  // console.log("list", wineList);
+  // console.log("randomBottle", randomBottle);
 
   return (
     <section className="bestSellers">

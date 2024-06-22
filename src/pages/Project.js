@@ -1,5 +1,3 @@
-// import Hero from "../componets/Hero";
-// import RandomWine from "../componets/RandomWine";
 import philosophyImage from "../img/projectPhilosophy.png"; // Імпорт зображення фону
 import ideaImage from "../img/projectIdea.png";
 import choose1Image from "../img/choose1.png";
@@ -7,13 +5,6 @@ import choose2Image from "../img/choose2.png";
 import "./Project.scss";
 
 const Project = () => {
-  //   const [imageList, setImageList] = useState([]);
-  // const location = useLocation();
-
-  //   useEffect(() => {
-  //     fetchMovies().then(setImageList);
-  //   }, []);
-
   return (
     <div className="project">
       <section className="project__hero">

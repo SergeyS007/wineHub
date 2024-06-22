@@ -1,0 +1,92 @@
+.randomWineCard {
+    width: 460px;
+    height: 416px;
+    border-radius: 12px;
+    
+    &__rating {
+        font-size: 16px;
+        line-height: 1.4;
+        
+
+        &-wrapper {
+            display: flex;
+            gap: 10px;
+        }
+    }
+
+    &__thumb {
+        position: absolute;
+        top: 300px;
+        left: 1000px;
+        width: 319px;
+        height: 530px;
+        z-index: 99;
+    }
+
+    &__img {
+        object-position: 50% 50%;
+        display: block;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 100;
+    }
+
+    &__reviews {
+        font-size: 16px;
+        line-height: 1.4;
+        margin-bottom: 20px;
+        color:#868E96;
+    }
+
+    &__name {
+        display: flex;
+        justify-content: space-between;
+        font-size: 40px;
+        line-height: 1.2;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    &__values {
+             display: flex;
+             flex-direction: column;
+             gap: 5px;
+         }
+    &__item {
+        font-size: 16px;
+        line-height: 1.4;
+        font-weight: 600;
+            //  margin-bottom: 20px;
+         }
+    &__value {
+        font-size: 16px;
+        line-height: 1.4;
+
+         }
+    &__wrapper {
+       display: flex;
+
+       & li {
+        list-style-type: none;
+       }
+        & ul {
+        margin: 0;
+        margin-right: 30px;
+        padding: 0;
+       }
+    }
+        &__button {
+        width: 220px;
+        height: 48px;
+        margin-top: 50px;
+        border-radius: 12px;
+        padding: 13px 26px 13px 26px;
+        color: #FFFFFF;
+        background-color: #336B46;
+         }
+}
