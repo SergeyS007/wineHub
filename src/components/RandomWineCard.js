@@ -18,7 +18,7 @@ const RandomWineCard = ({
     <div className="randomWineCard">
       <div className="randomWineCard__rating-wrapper">
         <div className="randomWineCard__rating">RATING {rating}</div>
-        <img src={stars} alt="Hero Background" />
+        <img src={stars} alt="rating stars" />
       </div>
 
       <div className="randomWineCard__reviews">

@@ -5,6 +5,7 @@
 import BestSellers from "../components/BestSellers";
 import Hero from "../components/Hero";
 import RandomWine from "../components/RandomWine";
+import RegisterForm from "../components/RegisterForm";
 import WineInsights from "../components/WineInsights";
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
       <RandomWine />
       <BestSellers />
       <WineInsights />
+      <RegisterForm />
     </div>
   );
 };

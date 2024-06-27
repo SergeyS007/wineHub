@@ -30,12 +30,19 @@
             display: flex;
 
         }
+       &__buttons {
+        display: flex;  
+        gap: 10px;         
+        }
        &__button {
-             padding: 0;
-             border: none;
-             border-radius:30px;
-             width: 48px;
-             height: 48px;
-                    
-                                        }
+            padding: 0;
+            border: none;
+            border-radius:30px;
+            width: 48px;
+            height: 48px;
+            background-color: #F1F3F5;
+        }
+         &__button img {
+            
+         }
 }

@@ -24,4 +24,8 @@ margin-bottom: 20px;
     display: flex;
     justify-content:space-between;
 }
+&__rating-wrapper {
+            display: flex;
+            gap: 10px;
+}
 }
