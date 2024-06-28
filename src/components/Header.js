@@ -1,10 +1,16 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import "./Header.scss";
 import userIcon from "../img/user-icon.png"; // Імпорт іконки користувача
 import searchIcon from "../img/search-icon.png"; // Імпорт іконки пошуку
 import Navigation from "./Navigation ";
+import { setShowFilter } from "../redux/showFiltersSlice";
 
 const Header = () => {
+  const dispatch = useDispatch();
+
+  const onSubmitFindYourWine = () => dispatch(setShowFilter());
+
   return (
     <header className="header">
       <div className="header__logo">Wine Hub</div>
@@ -22,7 +28,12 @@ const Header = () => {
       </div>
       <Navigation />
       <div className="header__user-block">
-        <button className="header__user-block__button">Find your Wine</button>
+        <button
+          className="header__user-block__button"
+          onClick={() => onSubmitFindYourWine()}
+        >
+          Find your Wine
+        </button>
         <div className="header__user-block__icon">
           <img src={userIcon} alt="User Icon" />
         </div>

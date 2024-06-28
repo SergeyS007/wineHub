@@ -1,0 +1,32 @@
+.filters {
+position: relative;
+display: flex;
+width: 100%;
+padding: 40px;
+&__label {
+    display: inline-block;
+    // margin-left: 1000px;
+    &-wrapper {
+    position: absolute;
+    right: 200px;
+    width: 180px;
+    height: 48px;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 13px 26px 13px 26px;
+    }
+   
+}
+    &__select {
+        display: block;
+        border: none;
+    }
+    &__content {
+     width: 440px;
+ }
+  &__form {
+     display: flex;
+     flex-direction: column;
+  }
+  
+}
