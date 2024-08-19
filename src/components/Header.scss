@@ -86,7 +86,7 @@
     gap: 8px; /* Відстань між кнопкою та іконкою */
     overflow: hidden; /* Прибираємо кути для іконки */
 
-    &__button {
+    &-button {
       padding: 0.75rem 1.5rem;
       background-color: #336B46;
       color: white;
@@ -107,11 +107,13 @@
       }
     }
 
-    &__icon {
+    &-registration {
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      border: none;
+      border-radius: 12px;
 
       img {
         width: 48px;
@@ -120,3 +122,4 @@
     }
   }
 }
+ 

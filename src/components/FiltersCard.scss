@@ -1,0 +1,78 @@
+.filtersCard {
+    
+    width: 900px;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    padding: 40px;
+&__btn-fav {
+    display: block;
+    margin-left: auto;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #FFFFFF;
+}
+&__rating {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+&__wrapper {
+display: flex;
+gap: 20px;
+}
+&__star {
+//    background-color:aqua;
+}
+
+&__content {
+    display: flex;
+    flex-direction: column;
+    width: 558px;
+}
+
+    &__thumb {
+        width: 240px;
+        height: 372px;
+        
+    }
+
+    &__img {
+        object-position: 50% 50%;
+        display: block;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    &__reviews {
+        font-size: 16px;
+        line-height: 1.4;
+        margin-bottom: 100px;
+    }
+
+    &__name {
+        font-size: 16px;
+        line-height: 1.4;
+        margin-bottom: 40px;
+    }
+    &__winaryName-wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 558px;
+    }
+    &__winaryName {
+      font-size: 40px;
+      line-height: 1.2;
+      font-weight: 500;
+    }
+    &__country {
+    display: flex;
+    align-items: center;
+    }
+    &__rating-wrapper {
+        display: flex;
+        gap: 10px;
+    }
+}

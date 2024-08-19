@@ -7,6 +7,15 @@ export const typeFilters = Object.freeze({
   nonAlcohol: "nonAlcohol",
 });
 
+export const priceFilters = Object.freeze({
+  S09: [0, 9],
+  S1029: [10, 29],
+  S3059: [30, 59],
+  S6099: [60, 99],
+  S100159: [100, 159],
+  S1601000: [160, 1000],
+});
+
 export const countryFilters = Object.freeze({
   France: "France",
   Italy: "Italy",

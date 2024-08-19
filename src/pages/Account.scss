@@ -1,0 +1,96 @@
+
+ .circle {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background-color: #CDD0D3;
+
+ }
+ .wrapper {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+ }
+
+ .account {
+    width: 1015px;
+    height: 858px;
+    padding: 32px 115px 32px 115px;
+    background-color: white;
+
+    &__update {
+        display: flex;
+        gap: 26px;
+        align-items: center;
+        width: 785px;
+        margin-bottom: 48px;
+    }
+        &__update-text {
+    font-size: 14px;
+    line-height: 1.3;
+    color:#868E96;
+        }
+
+    &__photo {
+        width: 210px;
+        height: 210px;
+        border-radius: 50%;
+        background-color: #CDD0D3;
+    }
+    &__btn-update {
+        display: flex;
+        gap: 8px;
+        align-items:center;
+        width: 220px;
+        height: 48px;
+        padding: 13px 26px 13px 26px;
+        margin-bottom: 10px;
+        border: 1px solid #336B46;
+        border-radius: 12px;
+        color: #336B46;
+        background-color: white;
+    }
+    &__btn-text {
+        width: 159px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.4;
+    }
+        &__form-labels {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 32px;
+        }
+    &__form-label {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        line-height: 1.3;
+        color: #212529;
+    }
+    &__form-input {
+      width: 382px;
+      height: 54px;
+      border: 1px solid #CDD0D3;
+      border-radius: 12px;
+      padding: 8px 16px 8px 16px;
+    }
+    &__form-country {
+      width: 785px;
+      margin-bottom: 32px;
+    }
+    &__form-btn {
+    display: block;
+    width: 220px;
+    height: 48px;
+    padding: 13px 26px 13px 26px;
+    margin-left: auto;
+    border-radius: 12px;
+    color: white;
+    background-color: #336B46;
+   }
+ }
+ .update__icon {
+    width: 16px;
+ }
+

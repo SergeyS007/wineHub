@@ -1,3 +1,12 @@
+  .filters__button {
+      width: 136px;
+      height: 48px;
+      border-radius: 12px;
+      border: 1px solid #336B46;
+  }
  .filters__button.isSelected {
      background-color: #336B46;
  }
+  .filters__button.isSelected .filters__buttons-text{
+      color: white;
+  }

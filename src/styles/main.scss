@@ -19,3 +19,9 @@ body, h1, p {
 body {
   font-family: 'Mulish', sans-serif;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

@@ -9,7 +9,7 @@ const showFiltersSlice = createSlice({
   initialState: showFiltersInitialState,
   reducers: {
     setShowFilter(state, action) {
-      state.show = !state.show;
+      state.show = action.payload;
     },
   },
 });

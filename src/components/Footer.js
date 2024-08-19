@@ -6,7 +6,12 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__contacts">
         <h2 className="footer__title">Let`s stay in contact</h2>
-        <form name="signup_form" autocomplete="on" novalidate>
+        <form
+          name="signup_form"
+          autocomplete="on"
+          novalidate
+          className="footer__form"
+        >
           <input
             placeholder="Write your email"
             type="email"

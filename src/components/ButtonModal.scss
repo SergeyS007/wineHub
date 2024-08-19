@@ -1,0 +1,18 @@
+  .hero__modal-button {
+    width: 164px;
+    height: 32px;
+    border-radius: 10px;
+    background-color: white;
+    border: none;
+    padding: 0 8px 0 8px;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 600;
+    text-align: start;
+  }
+
+  .hero__modal-button.isSelected {
+      background-color: #F1F3F5;
+  }
+
+ 

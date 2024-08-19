@@ -1,0 +1,32 @@
+.account_list {
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+}
+.account_link {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    width: 293px;
+    height: 54px;
+    padding: 8px 24px 8px 24px;
+    border-radius: 12px;
+    color: black;
+    text-decoration: none;
+
+    &.active {
+            background-color: #F1F3F5;
+        }
+}
+
+
+.account_nav {
+    width: 325px;
+    height: 858px;
+    padding: 40px 10px 40px 10px;
+    background-color: white;
+}
+.account__icon {
+    width: 20px;
+    height: 20px;
+}
