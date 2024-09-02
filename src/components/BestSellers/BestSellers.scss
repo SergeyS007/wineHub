@@ -1,0 +1,48 @@
+.bestSellers {
+    width: 100%;
+    // height: 1015px;
+    padding:  80px 40px 80px 40px;
+    
+    background: url('../../img/second-screen.png') center center / cover no-repeat;
+        /* Фон */
+
+    &__title {
+            font-size: 100px;
+            font-weight: 500;
+            margin: 0;
+            margin-left: 40px;
+            line-height: 1;
+            color: #333;
+        }
+    
+        &__sub-title {
+            font-size: 28px;
+            color: #4CAF50;
+            /* Колір зеленого підзаголовку */
+            font-style: italic;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 97px;
+            line-height: 1.2;
+        }
+
+       &__wrapper {
+            display: flex;
+
+        }
+       &__buttons {
+        display: flex;  
+        gap: 10px;         
+        }
+       &__button {
+            padding: 0;
+            border: none;
+            border-radius:30px;
+            width: 48px;
+            height: 48px;
+            background-color: #F1F3F5;
+        }
+         &__button img {
+            
+         }
+}

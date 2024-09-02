@@ -17,6 +17,7 @@ import { showModalReducer } from "./showModalSlice";
 import { showHeroReducer } from "./showHeroSlice";
 import { showRegisterReducer } from "./showRegisterSlice";
 import { authReducer } from "./auth/slice";
+import { winesReducer } from "./wines/slice";
 
 // Persisting token field from auth slice to localstorage
 const authPersistConfig = {
@@ -28,7 +29,7 @@ const authPersistConfig = {
 export const store = configureStore({
   reducer: {
     auth: persistReducer(authPersistConfig, authReducer),
-    // tasks: tasksReducer,
+    wines: winesReducer,
     filters: filtersReducer,
     showFilters: showFiltersReducer,
     showModal: showModalReducer,

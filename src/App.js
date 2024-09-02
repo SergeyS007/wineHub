@@ -1,16 +1,16 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Register from "./pages/Register";
+import Home from "./pages/Home/Home";
+import Register from "./pages/Register/Register";
 import "./styles/main.scss";
-import Layout from "./components/Layout";
-import Project from "./pages/Project";
-import OurTeam from "./pages/OurTeam";
-import Account from "./pages/Account";
-import AccountLayout from "./components/AccountLayout";
-import Setting from "./pages/AccountSetting";
-import Favorite from "./pages/AccountFavourite";
-import SignIn from "./pages/SignIn";
+import Layout from "./components/Layout/Layout";
+import Project from "./pages/Project/Project";
+import OurTeam from "./pages/OurTeam/OurTeam";
+import Account from "./pages/Account/Account";
+import AccountLayout from "./components/AccountLayout/AccountLayout";
+import Setting from "./pages/AccountSetting/AccountSetting";
+import Favorite from "./pages/AccountFavourite/AccountFavourite";
+import SignIn from "./pages/SignIn/SignIn";
 
 // const LoginPage = lazy(() => import("../pages/Login"));
 

@@ -15,3 +15,5 @@ export const getShowHero = (state) => state.showHero.showHero;
 export const getShowRegister = (state) => state.showRegister.showRegister;
 
 export const getShowSignIn = (state) => state.showRegister.showSignIn;
+
+export const getWines = (state) => state.wines.items;
