@@ -8,21 +8,66 @@
   background-color: rgba(255, 255, 255, 0.3); /* Напівпрозорий фон */
   backdrop-filter: blur(10px); /* Додає розмиття фону */
   // position: absolute;
-  width: 1440px;
+  max-width: 1440px;
   top: 0;
   z-index: 1000;
 
+  &__wrapper {
+    display: flex;
+    gap: 10px;
+  }
+
+    &__btn-mobile-menu {
+        display: block;
+        border: none;
+        background-color: #fff;
+      }
+    
+    @media screen and (min-width: 391px) {
+      &__btn-mobile-menu {
+        display: none;
+      
+      }
+    }
+ 
   &__logo {
-    margin-left: 40px; /* Відступ зліва */
     width: 114px; /* Ширина текстового логотипу */
     height: 31px; /* Висота текстового логотипу */
     display: flex;
     align-items: center;
-    font-size: 1.5rem; /* Регулюйте розмір шрифту за потреби */
-    // font-weight: bold; /* Жирний шрифт */
+    font-size: 18px; /* Регулюйте розмір шрифту за потреби */
+    font-weight: 600; /* Жирний шрифт */
+    line-height: 1.4;
     color: #212529; /* Колір тексту логотипу */
   }
 
+            @media screen and (min-width: 391px) {
+            &__logo {
+                margin-left: 40px;
+                /* Відступ зліва */
+                font-size: 24px;
+                      /* Регулюйте розмір шрифту за потреби */
+                font-weight: 500;
+                      /* Жирний шрифт */
+                line-height: 1.3;
+              }
+            }
+
+&__search-icon-mobile {
+  height: 20px;
+  width: 20px;
+}
+
+&__search-btn-mobile {
+  border: none;
+  background-color: #fff;
+}
+
+&__search {
+  display: none;
+}
+                    
+ @media screen and (min-width: 391px) {
   &__search {
     flex-grow: 1;
     display: flex;
@@ -48,7 +93,14 @@
       height: 20px;
       width: 20px;
     }
+
+  &-icon-mobile {
+    display: none;
   }
+
+
+  }
+}
 
   &__nav {
     &-list {
@@ -79,6 +131,17 @@
     }
   }
 
+&__user-block {
+  display: none;
+  &-button {
+    display: none;
+  }
+    &-registration {
+      display: none;
+    }
+}
+
+    @media screen and (min-width: 391px) {
   &__user-block {
     display: flex;
     align-items: center;
@@ -106,6 +169,11 @@
         background-color: #2d5e3e; /* Зміна кольору при наведенні */
       }
     }
+
+        &-registration-mobile {
+        display: none;
+        }
+  }
 
     &-registration {
       display: flex;

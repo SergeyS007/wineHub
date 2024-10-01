@@ -21,7 +21,7 @@ const Favorite = () => {
   // }, [dispatch]);
 
   const winesList = useSelector(selectAllWines);
-  console.log("winesList", winesList);
+  console.log("winesList1", winesList);
   const visibleWines = getFavouriteWines(winesList);
 
   return (

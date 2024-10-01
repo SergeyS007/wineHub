@@ -1,10 +1,12 @@
 import philosophyImage from "../../img/projectPhilosophy.png"; // Імпорт зображення фону
+import useMedia from "use-media";
 import ideaImage from "../../img/projectIdea.png";
 import choose1Image from "../../img/choose1.png";
 import choose2Image from "../../img/choose2.png";
 import "./Project.scss";
 
 const Project = () => {
+  const isWide = useMedia({ minWidth: "391px" });
   return (
     <div className="project">
       <section className="project__hero">
@@ -47,29 +49,61 @@ const Project = () => {
         </div>
       </section>
       <section className="project__section">
-        <div className="project__section-thumb">
-          <img src={ideaImage} alt="idea Background" />
-        </div>
-        <div className="project__section-content">
-          <h5>IDEA</h5>
-          <h4 className="project__section-title">
-            Discover the Perfect Wine with Our Virtual Sommelier
-          </h4>
-          <p>
-            Welcome to Wine Hub, where we bring the expertise of a professional
-            sommelier right to your fingertips. Our innovative virtual sommelier
-            service is designed to help you find the perfect wine for any
-            occasion, making wine selection an enjoyable and personalized
-            experience.
-          </p>
-          <p>
-            A virtual sommelier is an online tool that uses advanced algorithms
-            and expert knowledge to recommend wines based on your preferences,
-            occasion, and food pairings. Whether you're a seasoned wine
-            connoisseur or a casual drinker, our virtual sommelier is here to
-            guide you through the vast world of wine with ease and confidence.
-          </p>
-        </div>
+        {isWide ? (
+          <>
+            <div className="project__section-thumb">
+              <img src={ideaImage} alt="idea Background" />
+            </div>
+            <div className="project__section-content">
+              <h5>IDEA</h5>
+              <h4 className="project__section-title">
+                Discover the Perfect Wine with Our Virtual Sommelier
+              </h4>
+              <p>
+                Welcome to Wine Hub, where we bring the expertise of a
+                professional sommelier right to your fingertips. Our innovative
+                virtual sommelier service is designed to help you find the
+                perfect wine for any occasion, making wine selection an
+                enjoyable and personalized experience.
+              </p>
+              <p>
+                A virtual sommelier is an online tool that uses advanced
+                algorithms and expert knowledge to recommend wines based on your
+                preferences, occasion, and food pairings. Whether you're a
+                seasoned wine connoisseur or a casual drinker, our virtual
+                sommelier is here to guide you through the vast world of wine
+                with ease and confidence.
+              </p>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="project__section-content">
+              <h5>IDEA</h5>
+              <h4 className="project__section-title">
+                Discover the Perfect Wine with Our Virtual Sommelier
+              </h4>
+              <p>
+                Welcome to Wine Hub, where we bring the expertise of a
+                professional sommelier right to your fingertips. Our innovative
+                virtual sommelier service is designed to help you find the
+                perfect wine for any occasion, making wine selection an
+                enjoyable and personalized experience.
+              </p>
+              <p>
+                A virtual sommelier is an online tool that uses advanced
+                algorithms and expert knowledge to recommend wines based on your
+                preferences, occasion, and food pairings. Whether you're a
+                seasoned wine connoisseur or a casual drinker, our virtual
+                sommelier is here to guide you through the vast world of wine
+                with ease and confidence.
+              </p>
+            </div>
+            <div className="project__section-thumb">
+              <img src={ideaImage} alt="idea Background" />
+            </div>
+          </>
+        )}
       </section>
       <section className="project__choose">
         <h2 className="project__choose-title">Why choose us</h2>
@@ -100,7 +134,7 @@ const Project = () => {
             </div>
           </div>
           <div className="project__wrapper">
-            <div className="project__container-item"></div>
+            {isWide && <div className="project__container-item"></div>}
             <div className="project__container-item">
               <p>03</p>
               <h5 className="project__container-title">Expertise</h5>

@@ -28,19 +28,33 @@
     }
   }
 
+    &__content {
+      z-index: 1;
+      /* Попереду фонового зображення */
+      background-color: rgba(255, 255, 255, 0.2);
+      /* Напівпрозорий фон для тексту */
+      backdrop-filter: blur(10px);
+      /* Розмиття для тексту */
+      border-radius: 12px;
+      /* Круглі кути */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      /* Тінь навколо блоку */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 72px 12px;
+      /* Внутрішні відступи */
+      margin: 84px 20px;
+      position: relative;
+      /* Для використання абсолютного позиціонування всередині */
+    }
+
+  @media screen and (min-width: 391px) {
   &__content {
-    z-index: 1; /* Попереду фонового зображення */
-    background-color: rgba(255, 255, 255, 0.2); /* Напівпрозорий фон для тексту */
-    backdrop-filter: blur(10px); /* Розмиття для тексту */
-    border-radius: 12px; /* Круглі кути */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Тінь навколо блоку */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 1rem;
     padding: 100px 40px; /* Внутрішні відступи */
     margin: 100px 40px;
-    position: relative; /* Для використання абсолютного позиціонування всередині */
+  }
   }
 
   &__upper {
@@ -52,15 +66,27 @@
     text-align: left;
   }
 
+    &__upper-column {
+      // flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: flex-start;
+      /* Вирівнювання по лівому краю */
+      justify-content: center;
+      padding: 0 20px;
+    }
+@media screen and (min-width: 391px) {
   &__upper-column {
     // flex: 1;
     display: flex;
-    // flex-direction: column;
+    flex-direction: row;
     gap: 40px;
     align-items: flex-start; /* Вирівнювання по лівому краю */
     justify-content: center;
     padding: 0 20px;
   }
+}
 
   &__upper-column:first-child {
     align-items: flex-start; /* Вирівнювання по лівому краю */
@@ -71,14 +97,39 @@
   }
 
   &__title {
-    font-size: 6rem; /* Розмір шрифту заголовку */
-    font-weight: 700; /* Жирний шрифт */
+    font-size: 44px;
+          /* Розмір шрифту заголовку */
+    font-weight: 500;
+          /* Жирний шрифт */
     margin: 0;
-    line-height: 1.2;
-    color: #333; /* Колір тексту */
+    line-height: 1;
+    color: #333;
+          /* Колір тексту */
   }
+    @media screen and (min-width: 391px) {
+  &__title {
+    font-size: 6rem; 
+    font-weight: 700; 
+    line-height: 1.2;
+  }
+}
 
+    &__subtitle {
+      font-size: 8px;   /* Розмір шрифту підзаголовків */
+      margin: 0;
+      color: #333;  /* Колір тексту */
+      max-width: 100%;
+      line-height: 1.3;  /* Запобігання виходу тексту за межі блоку */
+    }
+
+        @media screen and (min-width: 391px) {
   &__subtitle {
+    font-size: 16px; /* Розмір шрифту підзаголовків */
+    line-height: 1.4;
+  }
+}
+
+    &__subtitle {
     font-size: 1.5rem; /* Розмір шрифту підзаголовків */
     font-weight: 300; /* Легкий шрифт */
     margin: 0;
@@ -86,8 +137,19 @@
     max-width: 100%; /* Запобігання виходу тексту за межі блоку */
   }
 
+     &__lower {
+      //  display: flex;
+      //  flex-wrap: wrap;
+      //  width: 100%;
+       
+    
+       position: relative;/* Для використання абсолютного позиціонування всередині */
+     }
+
+@media screen and (min-width: 391px) {
   &__lower {
     display: flex;
+    flex-wrap: nowrap;
     align-items: center; /* Центрування по центру */
     justify-content: flex-start; /* Вирівнювання по лівому краю */
     width: 100%;
@@ -95,12 +157,29 @@
     text-align: left; /* Текст по лівій стороні */
     position: relative; /* Для використання абсолютного позиціонування всередині */
   }
+}
 
+    &__highlighted-text {
+      padding-left: 135px;
+      font-family: 'Vujahday Script', sans-serif;
+      font-size: 48px;    /* Розмір шрифту виділеного тексту */
+      line-height: 1.2;
+      font-style: italic;  /* Курсив для виділеного тексту */
+      font-weight: 400;
+      color: #FFFFFF;  /* Виділений колір */
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-grow: 1;   /* Забезпечує зайняття всієї доступної ширини */
+    }
+
+        @media screen and (min-width: 391px) {
   &__highlighted-text {
     padding-left: 135px;
     font-family: 'Vujahday Script', sans-serif;
-    font-size: 6rem; /* Розмір шрифту виділеного тексту */
+    font-size: 104px; /* Розмір шрифту виділеного тексту */
     font-style: italic; /* Курсив для виділеного тексту */
+    line-height: .8;
     font-weight: 400;
     color: #FFFFFF; /* Виділений колір */
     display: flex;
@@ -108,14 +187,21 @@
     gap: 10px;
     flex-grow: 1; /* Забезпечує зайняття всієї доступної ширини */
   }
+}
 
+    &__main-title {
+      font-size: 44px;/* Розмір шрифту заголовку */
+      font-weight: 500;/* Жирний шрифт */
+      margin: 0;
+      line-height: 1;
+      color: #333; /* Колір тексту */
+    }
+
+        @media screen and (min-width: 391px) {
   &__main-title {
-    font-size: 6rem; /* Розмір шрифту заголовку */
-    font-weight: 700; /* Жирний шрифт */
-    margin: 0;
-    line-height: 1.2;
-    color: #333; /* Колір тексту */
+    font-size: 150px; /* Розмір шрифту заголовку */
   }
+}
 
   &__icon {
     width: 50px; /* Розмір іконки */

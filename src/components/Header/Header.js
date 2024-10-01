@@ -1,8 +1,11 @@
 import React from "react";
+import useMedia from "use-media";
 import { useDispatch } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./Header.scss";
+import menu from "../../img/Mobile/menu.png"; // Імпорт іконки користувача
 import userIcon from "../../img/user-icon.png"; // Імпорт іконки користувача
+import userIconMobile from "../../img/Mobile/person.png";
 import searchIcon from "../../img/search-icon.png"; // Імпорт іконки пошуку
 import Navigation from "../Navigation/Navigation ";
 // import { useAuth } from "hooks";
@@ -13,6 +16,8 @@ import { setShowModal } from "../../redux/showModalSlice";
 const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const isWide = useMedia({ minWidth: "391px" });
 
   const onSubmitFindYourWine = () => {
     dispatch(setShowFilter(true));
@@ -90,7 +95,16 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="header__logo">Wine Hub</div>
+      <div className="header__wrapper">
+        <button
+          className="header__btn-mobile-menu"
+          // onClick={() => onRegistration()}
+        >
+          <img src={menu} alt="Mobile menu" />
+        </button>
+        <div className="header__logo">Wine Hub</div>
+      </div>
+
       <div className="header__search">
         <img
           src={searchIcon}
@@ -106,7 +120,7 @@ const Header = () => {
           // onChange={onChangeHeaderSearchInput}
         />
       </div>
-      <Navigation />
+      {isWide && <Navigation />}
       <div className="header__user-block">
         <button
           className="header__user-block-button"
@@ -120,6 +134,20 @@ const Header = () => {
           // onClick={() => onRegistration()}
         >
           <img src={userIcon} alt="User Icon" />
+        </NavLink>
+        <button className="header__search-btn-mobile">
+          <img
+            src={searchIcon}
+            alt="Search Icon"
+            className="header__search-icon-mobile"
+          />
+        </button>
+        <NavLink
+          className="header__user-block-registration-mobile"
+          to={isLoggedIn ? "/account" : "/register"}
+          // onClick={() => onRegistration()}
+        >
+          <img src={userIconMobile} alt="User Icon Mobile" />
         </NavLink>
       </div>
       {/* {showModal && <Modal />} */}

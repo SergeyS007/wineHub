@@ -18,6 +18,8 @@ const WineList = ({ wines }) => {
           name={wine.name}
           country={wine.location.country}
           winaryName={wine.winery.name}
+          winary={wine.winery}
+          favourite={wine.favourite}
         />
       ))}
     </ul>

@@ -1,6 +1,6 @@
 // import { useLocation } from "react-router-dom";
 // import { Link } from "react-router-dom";
-import FiltersCard from "../FiltersCard/FiltersCard";
+import WineCardWide from "../WineCardWide/WineCardWide";
 import "./FiltersCardList.scss";
 
 const FiltersCardList = ({ wines }) => {
@@ -9,7 +9,7 @@ const FiltersCardList = ({ wines }) => {
   return (
     <ul className="filtersCardList">
       {wines.map((wine) => (
-        <FiltersCard
+        <WineCardWide
           key={wine.winery.id}
           rating={wine.rating.average}
           reviews={Number.parseInt(wine.rating.reviews)}

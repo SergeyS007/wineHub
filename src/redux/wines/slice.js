@@ -43,7 +43,7 @@ const winesSlice = createSlice({
     makeFavorite(state, action) {
       for (const item of state.items) {
         if (item.winery.id === action.payload) {
-          item.favourite = true;
+          item.favourite = !item.favourite;
           break;
         }
       }

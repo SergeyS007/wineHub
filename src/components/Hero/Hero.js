@@ -1,12 +1,15 @@
 import React from "react";
 // import { useSelector } from "react-redux";
+import useMedia from "use-media";
 import "./Hero.scss";
 import heroImage from "../../img/first-screen.png"; // Імпорт зображення фону
+import heroImageMobile from "../../img/Mobile/hero_bg.png";
 import arrowIcon from "../../img/arrow-icon.png"; // Імпорт іконки стрілки
 // import { getShowModal } from "../redux/selectors";
 // import Modal from "./Modal";
 
 const Hero = () => {
+  const isWide = useMedia({ minWidth: "391px" });
   // const refs = {
   //   hero: document.querySelector(".hero"),
   // };
@@ -20,7 +23,7 @@ const Hero = () => {
     <section className="hero">
       <div className="hero__background">
         <img
-          src={heroImage}
+          src={isWide ? heroImage : heroImageMobile}
           alt="Hero Background"
           className="hero__background-image"
         />

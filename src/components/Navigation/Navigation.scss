@@ -1,63 +1,6 @@
 /* Header.scss */
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-    /* Прибираємо бокові падінги тут */
-    background-color: rgba(255, 255, 255, 0.3);
-    /* Напівпрозорий фон */
-    backdrop-filter: blur(10px);
-    /* Додає розмиття фону */
-    // position: absolute;
-    width: 1440px;
-    top: 0;
-    z-index: 1000;
-
-    &__logo {
-        margin-left: 40px;
-        /* Відступ зліва */
-        width: 114px;
-        /* Ширина текстового логотипу */
-        height: 31px;
-        /* Висота текстового логотипу */
-        display: flex;
-        align-items: center;
-        font-size: 1.5rem;
-        /* Регулюйте розмір шрифту за потреби */
-        // font-weight: bold; /* Жирний шрифт */
-        color: #212529;
-        /* Колір тексту логотипу */
-    }
-
-    &__search {
-        flex-grow: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 2rem;
-        position: relative;
-        max-width: 400px;
-        width: 100%;
-
-        &-input {
-            width: 100%;
-            padding: 0.5rem 1rem 0.5rem 2.5rem;
-            /* Додати відступ для іконки */
-            border-radius: 12px;
-            border: 1px solid #ccc;
-            outline: none;
-            font-size: 1rem;
-        }
-
-        &-icon {
-            position: absolute;
-            left: 10px;
-            height: 20px;
-            width: 20px;
-        }
-    }
 
     &__nav {
         &-list {

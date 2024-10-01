@@ -1,4 +1,4 @@
-import "./FiltersCard.scss";
+import "./WineCardWide.scss";
 import { useDispatch } from "react-redux";
 import { makeFavorite } from "../../redux/wines/slice";
 import four_stars from "../../img/four_stars.png"; // Імпорт зображення фону
@@ -6,7 +6,7 @@ import five_stars from "../../img/five_stars.png"; // Імпорт зображ�
 import star_favorite from "../../img/star-favorite.png";
 import star_favorite_active from "../../img/star-favorite_active.png";
 
-const FiltersCard = ({
+const WineCardWide = ({
   rating,
   reviews,
   image,
@@ -22,8 +22,9 @@ const FiltersCard = ({
 
   const handleBtnFavorite = () => {
     console.log(id);
-    console.log(favourite);
+
     dispatch(makeFavorite(id));
+    console.log(favourite);
   };
 
   return (
@@ -59,4 +60,4 @@ const FiltersCard = ({
   );
 };
 
-export default FiltersCard;
+export default WineCardWide;

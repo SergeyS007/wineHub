@@ -1,14 +1,17 @@
 // import Hero from "../componets/Hero";
 // import RandomWine from "../componets/RandomWine";
 import "./OurTeam.scss";
+import useMedia from "use-media";
 import team from "../../img/team.png";
+import teamMobile from "../../img/Mobile/teamMobile.png";
 
 const OurTeam = () => {
+  const isWide = useMedia({ minWidth: "391px" });
   return (
     <div className="ourTeam">
       <section className="ourTeam__hero">
         <div className="ourTeam__content">
-          <p>TEAM PROJECT</p>
+          <p className="ourTeam__content-name">TEAM PROJECT</p>
           <h2 className="ourTeam__title">Valuable experience</h2>
           <p className="ourTeam__content-text">
             During last 5 weeks, our team worked independently on the project
@@ -28,7 +31,7 @@ const OurTeam = () => {
         </p>
         <div className="ourTeam__wrapper">
           <div className="ourTeam__team-image">
-            <img src={team} alt="team" />
+            <img src={isWide ? team : teamMobile} alt="team" />
           </div>
           <ul className="ourTeam__members">
             <li className="ourTeam__member">

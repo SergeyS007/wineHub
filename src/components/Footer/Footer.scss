@@ -1,40 +1,70 @@
 .footer {
 width: 100%;
-height: 412px;
+// height: 412px;
 
 &__contacts {
     width: 100%;
-    height: 348px;
+    min-height: 406px;
     background-color: #11362A;
+    padding: 60px 20px 60px 20px;
+}
+    @media screen and (min-width: 391px) {
+&__contacts {
+    width: 100%;
+    // height: 348px;
     padding: 80px 40px 80px 40px;
 }
+    }
+
 &__title {
     color: #FFFFFF;
-    font-size: 100px;
-    line-height: 1;
+    font-size: 56px;
+    line-height: 1.2;
     font-weight: 500;
     margin: 0;
     margin-bottom: 40px;
 }
+    @media screen and (min-width: 391px) {
+&__title {
+    font-size: 100px;
+    line-height: 1;
+    margin: 0;
+    margin-bottom: 40px;
+}
+    }
+
 &__input {
-    max-width: 1084px;
+    max-width: 350px;
     width: 100%;
-    height: 48px;
+    height: 46px;
     border: 1px solid #F1F3F5;
     border-radius: 12px;
     background-color: #11362A;
+    padding: 16px;
+}
+    @media screen and (min-width: 391px) {
+&__input {
+    max-width: 1084px;
+    height: 48px;
     padding: 0 16px 0 16px;
     margin-right: 10px;
 }
+}
+
 &__button {
-    width: 256px;
-    height: 48px;
+    width: 100%;
+    height: 46px;
     border: 1px solid #F1F3F5;
     border-radius: 12px;
     color: #FFFFFF;
     background-color: #336B46;
     padding: 13px 26px 13px 26px;
-    margin-right: 10px;
+}
+    @media screen and (min-width: 391px) {
+&__button {
+    width: 256px;
+    height: 48px;
+}
 }
 &__sub {
     display: flex;
@@ -56,9 +86,20 @@ height: 412px;
     line-height: 1.3;
     font-weight: 500;
 }
+
 &__form {
     display: flex;
+    flex-direction: column;
+    gap: 20px;
     width: 100%;
     height: 48px;
+}
+    @media screen and (min-width: 391px) {
+&__form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 48px;
+}
 }
 }
